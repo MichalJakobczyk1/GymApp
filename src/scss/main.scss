@@ -1,13 +1,52 @@
 @import "~normalize.css";
-
 @import "_variables";
-@import "modules/hello.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-body {
-  background: $wtf;
-  color: #fff;
+button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: #0069ed;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms;
+}
+
+.body {
+  font-family: "Roboto", sans-serif;
+  background: $mainColor;
+  color: $secondaryColor;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+}
+
+.main {
+  min-height: 100vh;
+  &__h1 {
+    color: $headerColor;
+    font-size: 48px;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 90vh;
+  &__tile {
+    background: $secondaryColor;
+    color: $mainColor;
+    border-radius: 25px;
+    font-size: 32px;
+    font-weight: 700;
+  }
 }
